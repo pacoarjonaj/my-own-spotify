@@ -1,15 +1,15 @@
 ---
-import Layout from "../../layouts/Layout.astro";
+import Layout from "../../layouts/Layout.astro"
 
-import PlayListItemCard from "../../components/PlayListItemCard.astro";
-import { allPlaylists, songs } from "../../lib/data";
+import PlayListItemCard from "../../components/PlayListItemCard.astro"
+import { allPlaylists, songs } from "../../lib/data"
 
-const { id } = Astro.params;
+const { id } = Astro.params
 
-const playlist = allPlaylists.find((playlist) => playlist.id === id);
+const playlist = allPlaylists.find((playlist) => playlist.id === id)
 const playlistSongs = songs.filter(
   (song) => song.albumId === playlist?.albumId,
-);
+)
 ---
 
 <Layout title="Spotify Clone">
